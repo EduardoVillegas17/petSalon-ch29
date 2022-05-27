@@ -60,3 +60,5 @@ function displayName(){
 }
 
 displayName();
+
+alert("There is "+salon.pets.length+" Registers");
