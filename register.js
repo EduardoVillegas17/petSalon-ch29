@@ -22,6 +22,7 @@ function displaySalonInfo(){
     <p>Welcome to the ${salon.name} located in ${salon.address.street}</p>
     <p> </p>`;
     document.getElementById("info").innerHTML=tmp;
+    console.log("displaying");
 }
 displaySalonInfo();
 
@@ -52,6 +53,15 @@ let pet1 = new Pet("Scooby",50,"Male","Dane","Grooming","Shaggy","888-888-888");
 let pet2 = new Pet("Moon",10,"Female","Poodle","Grooming","Luis","999-999-999");
 let pet3 = new Pet("Rocky",32,"Male","Chihuahua","Nails Court","Juan","777-777-777");
 
+function isValid(aPet){
+    let valid=true;
+    if(aPet.name==""||aPet.contactPhone==""){
+        //if we arrive here the pet is not valid
+        valid=false;
+    }
+    return valid;
+}
+//register pets
 function register(){
     console.log("Registering");
     //get the info from the inputs ***getElementById().value
@@ -64,12 +74,18 @@ function register(){
     let petPhone=document.getElementById("txtPhone").value;
     //create the object using the constructor
     let newPet = new Pet(petName,petAge,petGender,petBreed,petServices,petOwner,petPhone);
-    //push the object in on the array
+    if(isValid(newPet)==true){
+        //push the object in on the array
     salon.pets.push(newPet);
     //display it on the console
     console.log(newPet);
     console.log(salon.pets);
+    //clear the form
     clearForm();
+    }
+    else{
+        alert("Add a name for the pet");
+    }
 }
 
 function clearForm(){
@@ -84,8 +100,9 @@ function clearForm(){
 
 function init(){
     //hook events, triggered events
-    displayName();
+    displaySalonInfo();
     console.log(pet1,pet2,pet3);
+    displayCards();
 }
 
 window.onload=init;
