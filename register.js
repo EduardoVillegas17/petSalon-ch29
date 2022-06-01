@@ -24,13 +24,13 @@ function displaySalonInfo(){
     document.getElementById("info").innerHTML=tmp;
     console.log("displaying");
 }
-displaySalonInfo();
+/* displaySalonInfo();
 
 function displayName(){
     for(let i=0;i<salon.pets.length;i++){
         console.log(salon.pets[i].name);
     }
-}
+} */
 
 displayName();
 
