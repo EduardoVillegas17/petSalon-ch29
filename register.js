@@ -102,7 +102,7 @@ function init(){
     //hook events, triggered events
     displaySalonInfo();
     console.log(pet1,pet2,pet3);
-    displayCards();
+    displayTables();
 }
 
 window.onload=init;

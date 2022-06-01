@@ -1,4 +1,4 @@
-function displayCards(){
+function displayTables(){
     let petDiv = $("#pets");
     petDiv.html("");//claer the canvas
     //travel the array
@@ -6,13 +6,13 @@ function displayCards(){
     for(let i=0;i<salon.pets.length;i++){
         let pet = salon.pets[i];
         tmp=`
-        <div class="pet">
+        <tr class="pet">
             <h5>Name: ${pet.name} </h5>
             <p>Age: ${pet.age}</p>
             <p>Gender: ${pet.gender}</p>
             <p>Breed: ${pet.breed}</p>
             <p>Service: ${pet.service}</p>
-        </div>
+        </tr>
             `
         petDiv.append(tmp);
     }
