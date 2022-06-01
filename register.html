@@ -58,12 +58,27 @@
                 <input class="form-control" type="text" placeholder="Add the pet's phone" id="txtPhone">
             </div>
             <div class="mb-3">
-                <button class="btn btn-primary" onclick="register();">Register</button>
+                <button type="button" class="btn btn-success" onclick="register()"><i class="fa-solid fa-circle-check"></i> Ready for submission</button>
             </div>
         </div>
-        <div id="pets">
-
-        </div>
+        <hr>
+            <div id="pets" class="container table" >
+                <p class="table-title"><span>Meet</span>Our pets</p>
+                <table class="table table-bordered bordered-primary">
+                    <thead>
+                        <tr >
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Genered</th>
+                            <th scope="col">Breed</th>
+                            <th scope="col">Services</th>
+                            <th scope="col">Owner's</th>
+                            <th scope="col">Phone's</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
     </main>
 
     <footer id="info">

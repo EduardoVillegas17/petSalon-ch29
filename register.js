@@ -80,6 +80,7 @@ function register(){
     //display it on the console
     console.log(newPet);
     console.log(salon.pets);
+    displayTables();
     //clear the form
     clearForm();
     }
@@ -102,6 +103,8 @@ function init(){
     //hook events, triggered events
     displaySalonInfo();
     console.log(pet1,pet2,pet3);
+    salon.pets.push(pet1,pet2,pet3);
+
     displayTables();
 }
 

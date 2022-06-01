@@ -5,15 +5,16 @@ function displayTables(){
     let tmp="";
     for(let i=0;i<salon.pets.length;i++){
         let pet = salon.pets[i];
-        tmp=`
+        tr=`
         <tr class="pet">
-            <h5>Name: ${pet.name} </h5>
-            <p>Age: ${pet.age}</p>
-            <p>Gender: ${pet.gender}</p>
-            <p>Breed: ${pet.breed}</p>
-            <p>Service: ${pet.service}</p>
+            <td>Name: ${pet.name} </td>
+            <td>Age: ${pet.age}</td>
+            <td>Gender: ${pet.gender}</td>
+            <td>Breed: ${pet.breed}</td>
+            <td>Service: ${pet.service}</td>
         </tr>
-            `
-        petDiv.append(tmp);
+            `;
+        petDiv.append(tr);//adding to the HTML
     }
 }
+
